@@ -406,7 +406,7 @@ const MemberHome = () => {
                 {recentPayments.map((payment) => (
                   <div key={payment.id} className="flex items-center justify-between p-3 bg-gray-700 rounded-lg">
                     <div>
-                      <p className="font-medium text-white text-sm">${payment.amount.toFixed(2)}</p>
+                      <p className="font-medium text-white text-sm">{formatCurrency(payment.amount)}</p>
                       <p className="text-xs text-gray-400 capitalize">{payment.type.replace('-', ' ')}</p>
                       <p className="text-xs text-gray-400">
                         {payment.paidDate ? 
